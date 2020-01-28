@@ -3,7 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavModule } from './core/components/nav/nav.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HttpConfigInterceptor } from './core/services/http/interceptor.service';
+import { ClassDatatableComponent } from './core/components/class-datatable/class-datatable.component';
 
 import {HttpClientModule, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
 import {Injectable}  from '@angular/core';
@@ -38,47 +42,21 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainNavComponent,
-    DashboardComponent
-  ],
-  imports: [
-    FlexLayoutModule,
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatTableModule,
-    MatSortModule,
-    MatPaginatorModule,
-    MatFormFieldModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatInputModule,
-    MatAutocompleteModule,
-    MatTooltipModule,
-    MatCardModule,
-    MatDialogModule,
-    MatSnackBarModule,
-    MatSelectModule,
-    MatTabsModule,
-    FormsModule,
-    MatCheckboxModule,
-    MatExpansionModule,
-    ReactiveFormsModule,
-    MatRadioModule,
-    HttpClientModule,
-    MatStepperModule,
-    LayoutModule,
-    MatGridListModule,
-    MatMenuModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [AppComponent, ClassDatatableComponent],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        NavModule,
+        HttpClientModule,
+    ],
+    providers: [
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: HttpConfigInterceptor,
+            multi: true,
+        },
+    ],
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
