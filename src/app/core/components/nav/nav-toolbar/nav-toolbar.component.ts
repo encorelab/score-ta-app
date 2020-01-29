@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Page } from '../../../services/navigation/navigation.service';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Page} from '../../../services/navigation/navigation.service';
 
 @Component({
     selector: 'app-nav-toolbar',

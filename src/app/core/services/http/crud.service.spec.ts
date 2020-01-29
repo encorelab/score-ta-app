@@ -1,9 +1,9 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { CrudService } from './crud.service';
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import {CrudService} from './crud.service';
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
 
 @Injectable({
     providedIn: 'root',

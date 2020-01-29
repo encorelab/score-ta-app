@@ -1,7 +1,7 @@
-import { TestBed, async } from '@angular/core/testing';
+import {async, TestBed} from '@angular/core/testing';
 
-import { NavigationService } from './navigation.service';
-import { NavRoute } from '../../../nav-routing';
+import {NavigationService} from './navigation.service';
+import {NavRoute} from '../../../nav-routing';
 
 describe('NavigationService', () => {
     let service: NavigationService;

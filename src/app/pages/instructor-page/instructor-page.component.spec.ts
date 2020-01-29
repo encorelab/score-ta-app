@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { InstructorPageComponent } from './instructor-page.component';
+import {InstructorPageComponent} from './instructor-page.component';
 
 describe('InstructorPageComponent', () => {
   let component: InstructorPageComponent;

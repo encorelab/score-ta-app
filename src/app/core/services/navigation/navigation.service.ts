@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { NavRoute, NavRouteService } from '../../../nav-routing';
+import {Injectable} from '@angular/core';
+import {NavRoute, NavRouteService} from '../../../nav-routing';
 
 export class Page {
     title: string;

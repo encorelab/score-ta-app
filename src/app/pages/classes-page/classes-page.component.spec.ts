@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ClassesPageComponent } from './classes-page.component';
+import {ClassesPageComponent} from './classes-page.component';
 
 describe('ClassesPageComponent', () => {
   let component: ClassesPageComponent;

@@ -1,7 +1,7 @@
-import { HomePageComponent } from './home-page.component';
+import {HomePageComponent} from './home-page.component';
 
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [ {path:'',component:HomePageComponent,data:{shouldReuse:true,key:'home'}},  ];
 

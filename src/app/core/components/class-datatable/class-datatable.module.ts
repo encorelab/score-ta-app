@@ -1,6 +1,5 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {LogoComponent} from '../logo/logo.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {ClassDatatableComponent} from './class-datatable.component';
 import {MatTableModule} from '@angular/material';
 

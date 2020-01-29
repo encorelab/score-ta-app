@@ -1,7 +1,7 @@
-import { InstructorPageComponent } from './instructor-page.component';
+import {InstructorPageComponent} from './instructor-page.component';
 
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [ {path:'',component:InstructorPageComponent,data:{shouldReuse:true,key:'instructor'}},  ];
 

@@ -1,13 +1,8 @@
-import { Injectable } from '@angular/core';
-import {
-    ActivatedRouteSnapshot,
-    CanActivateChild,
-    RouterStateSnapshot,
-    UrlTree,
-} from '@angular/router';
-import { Observable } from 'rxjs';
-import { NavigationService } from './services/navigation/navigation.service';
-import { sideNavPath } from '../nav-routing';
+import {Injectable} from '@angular/core';
+import {ActivatedRouteSnapshot, CanActivateChild, RouterStateSnapshot, UrlTree,} from '@angular/router';
+import {Observable} from 'rxjs';
+import {NavigationService} from './services/navigation/navigation.service';
+import {sideNavPath} from '../nav-routing';
 
 @Injectable({
     providedIn: 'root',

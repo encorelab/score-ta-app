@@ -1,7 +1,7 @@
 import {ClassesPageComponent} from './classes-page.component';
 
 import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
     {
