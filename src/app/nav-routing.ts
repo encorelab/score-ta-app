@@ -1,5 +1,5 @@
-import { Route, Router } from '@angular/router';
-import { Injectable } from '@angular/core';
+import {Route, Router} from '@angular/router';
+import {Injectable} from '@angular/core';
 
 export interface NavRoute extends Route {
     path?: string;
@@ -11,49 +11,21 @@ export interface NavRoute extends Route {
 export const sideNavPath = 'nav';
 
 export const navRoutes: NavRoute[] = [
+
     {
-        data: { title: 'Home' },
-        icon: 'home',
-        path: 'home',
-        loadChildren: () =>
+        data: {title: 'Home'}, icon: 'home', group: '', path: 'home', loadChildren: () =>
             import('./pages/home-page/home-page.module').then(
                 m => m.HomePageModule,
             ),
-    },
-    {
-        path: '',
-        redirectTo: 'home',
-        pathMatch: 'full',
-    },
-    {
-        data: { title: 'TA - Classes' },
-        icon: 'class',
-        group: '',
-        path: 'page-classes',
-        loadChildren: () =>
-            import('./pages/page-classes-page/page-classes-page.module').then(
-                m => m.PageClassesPageModule,
+    }, {
+        data: {title: 'Classes'}, icon: 'class', group: '', path: 'classes', loadChildren: () =>
+            import('./pages/classes-page/classes-page.module').then(
+                m => m.ClassesPageModule,
             ),
-    },
-    {
-        path: 'child',
-        loadChildren: () =>
-            import(
-                './pages/page-class-1-page/page-class-1-page-routing.module'
-            ).then(m => m.PageClass1PageRoutingModule),
-        data: { title: 'Class 1', isChild: true },
-    },
-    {
-        data: { title: 'Instructor' },
-        icon: 'grade',
-        group: '',
-        path: 'page-instructor',
-        loadChildren: () =>
-            import(
-                './pages/page-instructor-page/page-instructor-page.module'
-            ).then(m => m.PageInstructorPageModule),
-    },
-];
+    },{data: {title: 'Instructor'},icon: 'grade',group: '',path: 'instructor',loadChildren: () =>
+                import('./pages/instructor-page/instructor-page.module').then(
+                    m => m.InstructorPageModule,
+                ),},];
 
 @Injectable({
     providedIn: 'root',

@@ -3,16 +3,10 @@ import { HomePageComponent } from './home-page.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [
-    {
-        path: '',
-        data: { shouldReuse: true, key: 'home' },
-        component: HomePageComponent,
-    },
-];
+const routes: Routes = [ {path:'',component:HomePageComponent,data:{shouldReuse:true,key:'home'}},  ];
 
 @NgModule({
-    imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule],
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
-export class HomePageRoutingModule {}
+export class HomePageRoutingModule { }
