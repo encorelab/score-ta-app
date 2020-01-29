@@ -7,16 +7,21 @@ import { NavModule } from './core/components/nav/nav.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { HttpConfigInterceptor } from './core/services/http/interceptor.service';
-import { ClassDatatableComponent } from './core/components/class-datatable/class-datatable.component';
+import {MatIconModule, MatTableModule} from '@angular/material';
 
 @NgModule({
-    declarations: [AppComponent, ClassDatatableComponent],
+    declarations: [
+        AppComponent
+    ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
         AppRoutingModule,
         NavModule,
         HttpClientModule,
+        MatIconModule,
+        MatTableModule,
+
     ],
     providers: [
         {
@@ -26,5 +31,8 @@ import { ClassDatatableComponent } from './core/components/class-datatable/class
         },
     ],
     bootstrap: [AppComponent],
+    exports: [
+
+    ]
 })
 export class AppModule {}

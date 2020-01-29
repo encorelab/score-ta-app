@@ -12,6 +12,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NavMenuItemComponent } from './nav-menu-item/nav-menu-item.component';
 import { NavToolbarComponent } from './nav-toolbar/nav-toolbar.component';
 import { MatExpansionModule } from '@angular/material';
+import {ClassDatatableModule} from '../class-datatable/class-datatable.module';
 
 @NgModule({
     declarations: [NavComponent, NavMenuItemComponent, NavToolbarComponent],
@@ -20,6 +21,7 @@ import { MatExpansionModule } from '@angular/material';
         RouterModule,
         MatSidenavModule,
         LogoModule,
+        ClassDatatableModule,
         FlexLayoutModule,
         MatListModule,
         MatToolbarModule,

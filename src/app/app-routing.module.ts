@@ -11,21 +11,13 @@ import { NavComponent } from './core/components/nav/nav.component';
 import { CustomRouteReuseStrategy } from './core/nav-reuse-strategy';
 import { NavGuard } from './core/nav.guard';
 
-const routes: Routes = [
-    {
-        path: 'page-home',
-        loadChildren: () =>
-            import('./pages/page-home-page/page-home-page.module').then(
-                m => m.PageHomePageModule,
-            ),
-    },
-    // {
-    //     path: 'login',
-    //     loadChildren: () =>
-    //         import('./pages/login-page/login-page.module').then(
-    //             m => m.LoginPageModule,
-    //         ),
-    // },
+const routes: Routes = [{path: 'instructor',loadChildren: () =>
+                import('./pages/instructor-page/instructor-page.module').then(
+                    m => m.InstructorPageModule,
+                ),},{path: 'classes',loadChildren: () =>
+                import('./pages/classes-page/classes-page.module').then(
+                    m => m.ClassesPageModule,
+                ),},
     {
         path: sideNavPath,
         component: NavComponent,

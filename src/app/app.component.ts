@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     // test
-    title = 'matFortyTwo';
+    title = 'score-ta-app';
 }
